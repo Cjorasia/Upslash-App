@@ -9,7 +9,7 @@ export function handleSearch(query) {
   return function (dispatch) {
     unsplash.search.getPhotos({
       query: query
-    }).then(result=>{console.log(result)})
+    }).then(result=>{console.log(result.response.results)})
 
   };
 }
