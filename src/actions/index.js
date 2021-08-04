@@ -9,7 +9,11 @@ export function handleSearch(query) {
   return function (dispatch) {
     unsplash.search.getPhotos({
       query: query
-    }).then(result=>{console.log(result.response.results)})
+    }).then(result=>{
+      const images = result.response.results;
+      console.log(images);
+      dispatch(addSearchResult(images));
+    })
 
   };
 }
@@ -21,9 +25,9 @@ export function handleSearch(query) {
 //     dispatch(addMovieSearchResult(movie));
 //   });
 
-export function addSearchResult(movie) {
+export function addSearchResult(results) {
   return {
     type: ADD_SEARCH_RESULT,
-    movie,
+    results
   };
 }

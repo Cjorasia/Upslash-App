@@ -30,6 +30,8 @@ class SearchBar extends React.Component {
 
   render() {
 
+
+
     return (
       <div className="search-bar">
         <div className="input-group mb-3">
@@ -47,8 +49,6 @@ class SearchBar extends React.Component {
           </div>
         </div>
 
-        <input />
-        <button id="search-btn">Search</button>
       </div>
     );
   }
