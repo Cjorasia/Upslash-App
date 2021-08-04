@@ -12,13 +12,29 @@ code {
     monospace;
 }
 
+.search-bar{
+
+  margin: 4%;
+}
+
 .images{
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 
 .img-box{
   padding: 10px;
   border-radius: 20px;
+}
+
+
+.form-control{
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.input-group{
+  margin-bottom: 10px;
 }

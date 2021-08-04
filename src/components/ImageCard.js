@@ -9,7 +9,7 @@ class ImageCard extends React.Component {
       <div>
         <div className="card" style ={{ width: "18 rem"}}>
           <img className="card-img-top" src={src} alt="" style={{width: "250px", height: "250px"}} />
-          <div className="card-body"></div>
+          
         </div>
       </div>
     );

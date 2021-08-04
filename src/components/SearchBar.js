@@ -29,24 +29,25 @@ class SearchBar extends React.Component {
       <div className="search-bar">
         <div className="input-group mb-3">
           <input
-            type="text"
-            className="form-control"
-            placeholder="Explore Upslash"
+            type="search"
+            class="form-control rounded"
+            placeholder="Search for photos"
+            aria-label="Search for photos"
+            aria-describedby="search-addon"
             onChange={this.handleChange}
           />
-          
 
-            <div class="input-group-append">
-              <button
-                class="btn btn-dark rounded"
-                type="button"
-                onClick={this.search}
-              >
-                <i class="fa fa-search"></i>
-              </button>
-            </div>
+          <div class="input-group-append">
+            <button
+              class="btn btn-dark rounded"
+              type="button"
+              onClick={this.search}
+            >
+              <i class="fa fa-search"></i>
+            </button>
           </div>
         </div>
+      </div>
     );
   }
 }

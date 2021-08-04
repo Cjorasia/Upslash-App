@@ -2,6 +2,8 @@ import React from "react";
 import SearchBar from "./SearchBar";
 import ImageCard from "./ImageCard";
 
+import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
 class App extends React.Component {
   componentDidMount() {
     const { store } = this.props;
@@ -33,17 +35,19 @@ class App extends React.Component {
     // console.log(result[1]);
 
     return (
-      <div className="app">
-        <div className="search-region">
-          <SearchBar dispatch={this.props.store.dispatch} />
-        </div>
+      <div className="container">
+        <div className="jumbotron">
+          <div className="search-region">
+            <SearchBar dispatch={this.props.store.dispatch} />
+          </div>
 
-        <div className="images">
-          {(result || []).map((img) => (
-            <div className="img-box">
-              <ImageCard src={img.urls.thumb} />
-            </div>
-          ))}
+          <div className="images">
+            {(result || []).map((img) => (
+              <div className="img-box">
+                <ImageCard src={img.urls.thumb} />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     );
