@@ -40,6 +40,8 @@ class App extends React.Component {
           <div className="search-region">
             <SearchBar dispatch={this.props.store.dispatch} />
           </div>
+          
+          {(result || []).length > 0 ? <div className="result-found"> <b>Results found : {(result || []).length}</b> </div> : null}
 
           <div className="images">
             {(result || []).map((img) => (
