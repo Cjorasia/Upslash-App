@@ -22,7 +22,7 @@ class App extends React.Component {
   render() {
     // const { search: result } = this.props.store.getState();
     const { result } = this.props.store.getState().search;
-    
+
     // for (const property in result) {
     //   console.log(`${property}: ${result[property]}`);
     // }
@@ -37,9 +37,13 @@ class App extends React.Component {
         <div className="search-region">
           <SearchBar dispatch={this.props.store.dispatch} />
         </div>
-        
+
         <div className="images">
-          {(result || []).map(r => console.log("iterated",r))}
+          {(result || []).map((img) => (
+            <div className="img-box">
+              <ImageCard src={img.urls.thumb} />
+            </div>
+          ))}
         </div>
       </div>
     );
