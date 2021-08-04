@@ -7,7 +7,6 @@ const initialRootState = {
    }
 }
 
-
 // search reducer
 export function search(state = initialRootState, action) {
 
